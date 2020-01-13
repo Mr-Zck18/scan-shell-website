@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Recode by Posix
+# Author : Mr.Zck18
 
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
@@ -23,7 +23,7 @@ class ZeroScann():
         self.scan()
         
     def scan(self):
-        # argument parser like shit
+        # argument parser taiik
         parser = argparse.ArgumentParser(prog="PosiX.py", description="Simple Find Shell in Website")
         parser.add_argument("-u", dest="domain", help="your url")
         parser.add_argument("-w", dest="wordlist", help="your wordlsit")
@@ -33,7 +33,7 @@ class ZeroScann():
         if not args.wordlist:
             sys.exit("\033[36musage: golek.py -u example.com -w list.txt")
             
-        # handle url website format
+        #Untuk url cuk
         site = args.domain
         print("\033[96m[?] \033[0mMemulai Program...")
         print("\033[96m[!] \033[0mTunggu Sebentar !")
@@ -43,7 +43,7 @@ class ZeroScann():
             site = "http://"+site
         if not site.endswith("/"):
             site = site+"/"
-        # load wordlist
+        # baca wordlist
         try:
             pathlist = args.wordlist
             wlist = open(pathlist, "r")
@@ -58,11 +58,11 @@ class ZeroScann():
                 print("\033[91mWordlist Can\'t Close!\033[0m")
         # user-agent
         user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36"
-        #list to hold the results we find
+        #Ngentod lah kau
         found = []
         # respon code
         resp_codes = {403 : "403 forbidden", 401 : "401 unauthorized"}
-        # loop with join pathlist
+        # loop untuk mencoba password
         starttime = time.time()
         for psx in wordlist:
             try:
