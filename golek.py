@@ -84,7 +84,7 @@ class ZeroScann():
                 except URLError as e:
                     sys.exit("\033[31m[!] Ups ! Tidak ada koneksi internet :v ")
                 except Exception as er:
-                    print("\n\033[93m[?] \033[0mYour Connection Is Bad")
+                    print("\n\033[93m[?] \033[0mSambungan Anda Tidak Baik !")
                     print("\033[93m[!] \033[0mKeluar Program")
                     time.sleep(3)
                     exit()
